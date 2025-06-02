@@ -2,37 +2,43 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: 'Segoe UI', Arial, sans-serif;
+  /* Pattern background */
   background-image: url('assets/images/TheBackground.jpg');
   background-repeat: repeat;
-  background-size: auto;
-  /* You can use background-size: cover; if you want it to stretch */
+  background-size: 200px 200px; /* Adjust as needed for your pattern */
+  background-position: center;
 }
 
-.container {
+.overlay {
+  min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: rgba(255,255,255,0.85); /* subtle overlay for readability */
+  /* Subtle white overlay for readability */
+  background: rgba(255,255,255,0.85);
   box-sizing: border-box;
+  padding: 32px 16px;
 }
 
 .logo {
-  max-width: 240px;
-  width: 80vw;
-  margin-top: 40px;
+  max-width: 180px;
+  width: 90vw;
+  height: auto;
   margin-bottom: 32px;
-  display: block;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
 }
 
 .our-story {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 2.2rem;
+  font-weight: 700;
   color: #a0522d;
   margin-bottom: 48px;
   margin-top: 0;
   letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(255,255,255,0.5);
 }
 
 .order-btn {
@@ -45,15 +51,15 @@ body {
   border: none;
   border-radius: 32px;
   text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-  transition: background 0.2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: background 0.2s, transform 0.15s;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .order-btn:hover {
   background-color: #ffa500;
-  color: #fff;
-  cursor: pointer;
+  transform: translateY(-2px) scale(1.03);
 }
 
 @media (max-width: 600px) {
